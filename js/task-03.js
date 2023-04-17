@@ -30,3 +30,9 @@ const photos = images
   .join("");
 
 gallery.insertAdjacentHTML("beforeend", photos);
+
+gallery.style.listStyleType = "none";
+gallery.style.display = "flex";
+gallery.style.flexWrap = "wrap";
+gallery.style.gap = "40px";
+gallery.style.justifyContent = "center";
