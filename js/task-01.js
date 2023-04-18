@@ -22,7 +22,7 @@ const menuItems = categories.querySelectorAll(".item");
 console.log(`Number of categories: ${menuItems.length}`);
 
 menuItems.forEach((item) => {
-  const itemTitle = item.querySelector("h2").textContent;
+  const itemTitle = item.firstElementChild.textContent;
   const itemLength = item.querySelectorAll("li").length;
   console.log(`Category: ${itemTitle} \nElements: ${itemLength}`);
 });
