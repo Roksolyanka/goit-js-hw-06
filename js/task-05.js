@@ -7,9 +7,12 @@ const refs = {
 };
 refs.input.addEventListener("input", onInputChange);
 function onInputChange(event) {
-  if (event.currentTarget.value !== "") {
-    refs.phrase.textContent = event.currentTarget.value;
-  } else {
-    refs.phrase.textContent = "Anonymous";
-  }
+  event.currentTarget.value !== ""
+    ? (refs.phrase.textContent = event.currentTarget.value.trim())
+    : (refs.phrase.textContent = "Anonymous");
+  // if (event.currentTarget.value !== "") {
+  //   refs.phrase.textContent = event.currentTarget.value.trim();
+  // } else {
+  //   refs.phrase.textContent = "Anonymous";
+  // }
 }
