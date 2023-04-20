@@ -23,6 +23,6 @@ console.log(`Number of categories: ${menuItems.length}`);
 
 menuItems.forEach((item) => {
   const itemTitle = item.firstElementChild.textContent;
-  const itemLength = item.querySelectorAll("li").length;
+  const itemLength = item.lastElementChild.children.length;
   console.log(`Category: ${itemTitle} \nElements: ${itemLength}`);
 });
